@@ -1,0 +1,14 @@
+knight = class(piece)
+
+function knight:init(x)
+    -- you can accept and set parameters here
+    self.x = x
+end
+
+function knight:draw()
+    -- Codea does not automatically call this method
+end
+
+function knight:touched(touch)
+    -- Codea does not automatically call this method
+end
