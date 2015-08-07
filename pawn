@@ -1,0 +1,14 @@
+pawn = class(piece)
+
+function pawn:init(x)
+    -- you can accept and set parameters here
+    self.x = x
+end
+
+function pawn:draw()
+    -- Codea does not automatically call this method
+end
+
+function pawn:touched(touch)
+    -- Codea does not automatically call this method
+end
