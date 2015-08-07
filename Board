@@ -1,0 +1,43 @@
+
+Board = class()
+
+function Board:init()
+    board = {
+    {"r","k","b","q","k","n","b","r"},
+    {"p","p","p","p","p","p","p","p"},
+    {nil,nil,nil,nil,nil,nil,nil,nil},
+    {nil,nil,nil,nil,nil,nil,nil,nil},
+    {nil,nil,nil,nil,nil,nil,nil,nil},
+    {nil,nil,nil,nil,nil,nil,nil,nil},
+    {"p","p","p","p","p","p","p","p"},
+    {"r","k","b","q","k","n","b","r"},
+    }
+end
+
+function Board:draw()
+    for u = 1,8 do
+        for i = 1,4 do
+            n = u%2
+            fill(255, 255, 255, 255)
+            rect(192*(i-1)+(n*96),96*(u-1),97,97)
+            n = (u-1)%2
+            fill(0, 0, 0, 255)
+            rect(192*(i-1)+(n*96),96*(u-1),97,97)
+        end
+    end
+    for w,x in pairs(board) do
+        for c,d in pairs(x) do
+            fontSize(40)
+            fill(0, 92, 255, 255)
+            text(board[w][c],c*96-45,w*96-45)
+        end
+    end
+end
+
+function Board:convertToBoard(x,y)
+    local bx,by = 0,0
+    bx = math.min(math.ceil(x/96),8)
+    by = math.min(math.ceil(x/96),8)
+end
+
+
