@@ -1,0 +1,18 @@
+-- Chess
+
+displayMode(OVERLAY)
+function setup()
+    b = Board()
+    b:init()
+end
+
+function draw()
+    background(170, 157, 136, 255)
+    b:draw()
+end
+
+function touched(t)
+    if t.state == BEGAN then
+        print(board[math.ceil(t.y/96)][math.ceil(t.x/96)])
+    end
+end
