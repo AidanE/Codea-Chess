@@ -2,7 +2,7 @@ knight = class(piece)
 
 function knight:init(x)
     -- you can accept and set parameters here
-    self.x = x
+    piece.init(self,x,y)
 end
 
 function knight:draw()

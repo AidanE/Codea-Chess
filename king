@@ -2,7 +2,7 @@ king = class(piece)
 
 function king:init(x)
     -- you can accept and set parameters here
-    self.x = x
+    piece.init(self,x,y)
 end
 
 function king:draw()

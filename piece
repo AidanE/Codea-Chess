@@ -1,8 +1,10 @@
 piece = class()
 
-function piece:init(x)
+function piece:init(x,y)
     -- you can accept and set parameters here
     self.x = x
+    self.y = y
+    self.selected = false
 end
 
 function piece:draw()

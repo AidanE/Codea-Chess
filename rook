@@ -1,8 +1,8 @@
 rook = class(piece)
 
-function rook:init(x)
+function rook:init(x,y)
     -- you can accept and set parameters here
-    self.x = x
+    piece.init(self,x,y)
 end
 
 function rook:draw()
